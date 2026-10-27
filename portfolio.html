@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photo gallery of coffee, desserts and the cozy interior of Whisker & Wonderland.">
+  <title>Gallery | Whisker & Wonderland</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Whisker &amp; Wonderland</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Menu</a>
+        <a href="portfolio.html">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-title">
+      <p class="script">A Peek Inside</p>
+      <h1>Our <span class="gold">Gallery</span></h1>
+    </section>
+
+    <section class="picks">
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="coffee">Coffee</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+        <button class="filter-btn" data-filter="interior">Interior</button>
+      </div>
+
+      <div class="gallery">
+
+        <div class="gallery-item" data-category="coffee">
+          <img src="images/coffee1.jpg" alt="Cup of latte with art">
+          <span>Latte Art</span>
+        </div>
+        <div class="gallery-item" data-category="coffee">
+          <img src="images/coffee2.jpg" alt="Iced coffee with ice cubes">
+          <span>Iced Coffee</span>
+        </div>
+        <div class="gallery-item" data-category="coffee">
+          <img src="images/coffee3.jpg" alt="Fresh coffee beans">
+          <span>Fresh Beans</span>
+        </div>
+
+        <div class="gallery-item" data-category="desserts">
+          <img src="images/dessert1.jpg" alt="Chocolate brownie">
+          <span>Chocolate Brownie</span>
+        </div>
+        <div class="gallery-item" data-category="desserts">
+          <img src="images/dessert2.jpg" alt="Slice of cheesecake">
+          <span>Cheesecake</span>
+        </div>
+        <div class="gallery-item" data-category="desserts">
+          <img src="images/dessert3.jpg" alt="Golden butter croissants">
+          <span>Croissants</span>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="images/interior1.jpg" alt="Cozy seating area">
+          <span>Cozy Corner</span>
+        </div>
+        <div class="gallery-item" data-category="interior">
+          <img src="images/interior2.jpg" alt="Coffee bar counter">
+          <span>Coffee Bar</span>
+        </div>
+        <div class="gallery-item" data-category="interior">
+          <img src="images/interior3.jpg" alt="Warm lights and plants">
+          <span>Warm Lights</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Whisker &amp; Wonderland. Made by Fiza Saleem.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
