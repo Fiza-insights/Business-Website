@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Whisker & Wonderland coffee shop. Send us a message or visit us.">
+  <title>Contact | Whisker & Wonderland</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Whisker &amp; Wonderland</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Menu</a>
+        <a href="portfolio.html">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-title">
+      <p class="script">We'd Love To Hear From You</p>
+      <h1>Contact <span class="gold">Us</span></h1>
+    </section>
+
+    <section class="contact-wrap">
+
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mljjjkjq" method="POST" novalidate>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+        <small class="error" id="nameError"></small>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        <small class="error" id="emailError"></small>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+        <small class="error" id="messageError"></small>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+
+      <div class="contact-info">
+        <h2>Visit Us</h2>
+        <p class="muted">123 Coffee Lane, Lahore, Pakistan</p>
+
+        <h3>Opening Hours</h3>
+        <p class="muted">Mon to Fri: 8:00 AM to 10:00 PM</p>
+        <p class="muted">Saturday: 9:00 AM to 11:00 PM</p>
+        <p class="muted">Sunday: 10:00 AM to 9:00 PM</p>
+
+        <h3>Get In Touch</h3>
+        <p class="muted">hello@whiskerwonderland.com</p>
+        <p class="muted">+92 300 0000000</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Whisker &amp; Wonderland. Made by Fiza Saleem.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>`
