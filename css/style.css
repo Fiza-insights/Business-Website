@@ -290,4 +290,38 @@ main {
 
 @media (max-width: 800px) {
   .cards.three { grid-template-columns: 1fr; }
+}/* MENU PAGE */
+.menu-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.menu-section h2 {
+  color: var(--tan);
+  margin-bottom: 12px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item h3 {
+  font-size: 1.1rem;
+}
+
+.menu-item .muted {
+  font-size: 0.85rem;
 }
