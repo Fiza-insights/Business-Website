@@ -1,0 +1,293 @@
+:root {
+  --bg: #120C09;
+  --card: #1E1511;
+  --border: #3A2A20;
+  --caramel: #A87650;
+  --tan: #B8895F;
+  --cream: #F3E9DC;
+  --muted: #A89888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.site-header {
+  background: rgba(18, 12, 9, 0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--cream);
+}
+
+.nav-links a {
+  color: var(--cream);
+  margin-left: 22px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--tan);
+}
+
+/* Main area */
+main {
+  min-height: 60vh;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Buttons (aage use honge) */
+.btn {
+  display: inline-block;
+  background: var(--caramel);
+  color: var(--cream);
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--tan);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--cream);
+}
+
+/* Small script label (aage use hoga) */
+.script {
+  font-family: 'Dancing Script', cursive;
+  color: var(--tan);
+  font-size: 1.4rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  padding: 24px;
+}/* Extra helpers */
+.gold { color: var(--tan); }
+.muted { color: var(--muted); }
+.center { text-align: center; }
+
+/* Main ko full width karna Home ke liye */
+main {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* HERO */
+.hero {
+  min-height: 85vh;
+  background:
+    linear-gradient(90deg, rgba(18,12,9,0.95) 30%, rgba(18,12,9,0.3)),
+    url("../images/hero.jpg") center/cover no-repeat,
+    var(--bg);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-text {
+  max-width: 1100px;
+  margin: auto;
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  max-width: 500px;
+  margin: 10px 0 16px;
+}
+
+.hero-text .muted {
+  max-width: 400px;
+  margin-bottom: 26px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ABOUT */
+.about-home {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-home img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.about-home h2 {
+  font-size: 2.2rem;
+  margin: 6px 0 14px;
+}
+
+.about-home .btn {
+  margin-top: 20px;
+}
+
+/* POPULAR PICKS */
+.picks {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+
+.picks h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: var(--bg);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.card .muted {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: var(--tan);
+  font-weight: 500;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .hero-text h1 { font-size: 2.2rem; }
+  .about-home { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .nav-links a { margin-left: 12px; font-size: 0.8rem; }
+}
+/* PAGE TITLE (har inner page ka upar wala heading) */
+.page-title {
+  text-align: center;
+  padding: 60px 20px 10px;
+}
+
+.page-title h1 {
+  font-size: 2.6rem;
+}
+
+/* 3 cards wali row */
+.cards.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cards.three .card {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+/* OPENING HOURS */
+.hours {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.hours h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 800px) {
+  .cards.three { grid-template-columns: 1fr; }
+}
