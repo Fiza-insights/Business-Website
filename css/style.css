@@ -501,3 +501,142 @@ main {
 @media (max-width: 800px) {
   .contact-wrap { grid-template-columns: 1fr; }
 }
+/* ANIMATIONS */
+html { scroll-behavior: smooth; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero aur page titles page khulte hi upar aayen */
+.hero-text > * {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+.hero-text > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-text > *:nth-child(2) { animation-delay: 0.3s; }
+.hero-text > *:nth-child(3) { animation-delay: 0.5s; }
+.hero-text > *:nth-child(4) { animation-delay: 0.7s; }
+
+.page-title > * {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.page-title > *:nth-child(2) { animation-delay: 0.2s; }
+
+/* Scroll karne par cheezein ek ek karke aayen */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cards .reveal:nth-child(2) { transition-delay: 0.12s; }
+.cards .reveal:nth-child(3) { transition-delay: 0.24s; }
+.cards .reveal:nth-child(4) { transition-delay: 0.36s; }
+
+/* Cards upar uthen aur halki roshni aaye */
+.card.reveal.show:hover {
+  transform: translateY(-8px);
+  border-color: var(--tan);
+  box-shadow: 0 12px 30px rgba(168, 118, 80, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+.btn:hover::after { left: 125%; }
+
+/* Navbar links ke neeche line */
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--tan);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* Jin logon ne device mein animation band ki hai */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .hero-text > *, .page-title > *, .reveal { opacity: 1; transform: none; }
+}
+/* ADVANCED ANIMATIONS */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--caramel), var(--tan));
+  z-index: 200;
+}
+
+.site-header { transition: box-shadow 0.3s ease; }
+.navbar { transition: padding 0.3s ease; }
+.site-header.scrolled { box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5); }
+.site-header.scrolled .navbar { padding-top: 8px; padding-bottom: 8px; }
+
+.hero { position: relative; overflow: hidden; }
+.hero-text { position: relative; z-index: 2; }
+.hero-text .script { min-height: 1.7em; }
+
+.particle {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  background: rgba(184, 137, 95, 0.55);
+  filter: blur(1px);
+  pointer-events: none;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(-95vh) translateX(40px); opacity: 0; }
+}
+
+.typing::after {
+  content: "|";
+  margin-left: 2px;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.gallery-item.pop { animation: popIn 0.5s ease; }
