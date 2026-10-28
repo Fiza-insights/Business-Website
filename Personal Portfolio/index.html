@@ -3,114 +3,305 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Fiza Saleem, Full Stack Developer Intern at Codneura. Skills, projects and contact details.">
-  <title>Fiza Saleem | Portfolio</title>
+  <meta name="description" content="Portfolio of Fiza Saleem, Full Stack Developer Intern at Codneura. Websites, web apps, skills and contact details.">
+  <title>Fiza Saleem | Full Stack Developer Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Dancing+Script:wght@500&family=Poppins:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="#home" class="logo">Fiza Saleem</a>
-      <div class="links">
+  <div class="scroll-progress"></div>
+  <div class="cursor-glow"></div>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo">Fiza<span>.</span></a>
+      <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
       </div>
+      <a href="#contact" class="btn small magnetic nav-cta">Let's Talk</a>
+      <button class="menu-btn" aria-label="Menu">&#9776;</button>
     </nav>
   </header>
 
   <main>
 
-    <section id="home" class="hero">
-      <div class="avatar">F</div>
-      <p class="script">Hello, I am</p>
-      <h1>Fiza <span class="gold">Saleem</span></h1>
-      <p class="muted intro">Full Stack Developer Intern at Codneura. I build clean, responsive websites and web applications.</p>
-      <div>
-        <a href="#projects" class="btn">View My Work</a>
-        <a href="#contact" class="btn outline">Contact Me</a>
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero-text">
+        <p class="script">Full Stack Developer Intern</p>
+        <h1>
+          <span class="line"><span>Code that</span></span>
+          <span class="line"><span>builds <em>websites.</em></span></span>
+        </h1>
+        <p class="lead">I design and build clean, responsive websites and web apps. Right now I am building five real-world projects in 30 days at Codneura.</p>
+        <div class="hero-buttons">
+          <a href="#work" class="btn magnetic">View My Work &rarr;</a>
+          <a href="#contact" class="btn outline magnetic">Contact Me</a>
+        </div>
+        <div class="stats">
+          <div><strong><span data-count="5">5</span></strong><small>Projects</small></div>
+          <div><strong><span data-count="30">30</span></strong><small>Day Sprint</small></div>
+          <div><strong><span data-count="7">7</span>+</strong><small>Core Skills</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="leaf leaf-1" data-speed="-0.08" data-rot="-20"></div>
+        <div class="leaf leaf-2" data-speed="0.06" data-rot="25"></div>
+        <div class="blob"></div>
+        <!-- Apni photo lagane ke liye neeche wali line badlein:
+             <div class="portrait"><img src="profile.jpg" alt="Fiza Saleem"></div> -->
+        <div class="portrait"><span>F</span></div>
+        <div class="floating-card">Clean code.<br>Real projects.<br>Results that last.</div>
       </div>
     </section>
 
-    <section id="about">
-      <h2>About <span class="gold">Me</span></h2>
-      <div class="about-text">
-        <p class="muted">I am a student and a Full Stack Developer Intern at Codneura. During this internship I am building five real-world projects: a business website, an online store, a web application, a booking system and a blog portal. I enjoy turning ideas into simple, good-looking and easy-to-use websites.</p>
+    <!-- ABOUT -->
+    <section id="about" class="about-wrap">
+      <div class="about">
+        <div class="about-photo">
+          <div class="portrait small"><span>F</span></div>
+          <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
+            <defs>
+              <path id="circlePath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/>
+            </defs>
+            <text>
+              <textPath href="#circlePath" textLength="272" lengthAdjust="spacing">FULL STACK DEVELOPER &#8226; CODNEURA INTERN &#8226;</textPath>
+            </text>
+          </svg>
+        </div>
+
+        <div class="about-text">
+          <p class="script light">About Me</p>
+          <h2>I'm Fiza, your partner in building websites.</h2>
+          <p>I am a student and a Full Stack Developer Intern at Codneura. In a 30-day sprint I am building five real-world projects, from business websites to booking systems, and I care about clean code and pages that look good and are easy to use.</p>
+          <ul class="about-list">
+            <li>Business and portfolio websites</li>
+            <li>E-commerce and web applications</li>
+            <li>Booking systems and content portals</li>
+            <li>Clean, responsive design</li>
+          </ul>
+        </div>
+
+        <div class="mission-card">
+          <p>My goal is simple: to build websites that look good, work well and are easy for everyone to use.</p>
+        </div>
       </div>
     </section>
 
-    <section id="skills">
-      <h2>My <span class="gold">Skills</span></h2>
-      <div class="skills">
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">Responsive Design</span>
-        <span class="skill">Git &amp; GitHub</span>
-        <span class="skill">VS Code</span>
-        <span class="skill">Form Validation</span>
+    <!-- SERVICES -->
+    <section id="services" class="section container">
+      <div class="section-head">
+        <p class="script">What I Build</p>
+        <h2>Tailored websites. <em>Real results.</em></h2>
       </div>
-      <p class="learning muted">Currently learning: React, Node.js, Python (Flask/Django) and SQL</p>
-    </section>
+      <div class="cards-3">
 
-    <section id="projects">
-      <h2>Internship <span class="gold">Projects</span></h2>
-      <div class="projects">
-
-        <div class="project">
-          <span class="num">Project 1</span>
-          <h3>Business Website</h3>
-          <p class="muted">Whisker &amp; Wonderland, an aesthetic coffee shop website with menu, gallery filters and a contact form.</p>
-          <a class="link" href="https://github.com/Fiza-insights/Business-Website" target="_blank" rel="noopener">View on GitHub</a>
+        <div class="service-card tilt">
+          <span class="chip">Websites</span>
+          <h3>Business Websites</h3>
+          <p class="small-text">For shops, studios and brands</p>
+          <ul>
+            <li>Responsive multi-page layouts</li>
+            <li>Contact forms with validation</li>
+            <li>Image galleries with filters</li>
+            <li>SEO-friendly structure</li>
+          </ul>
         </div>
 
-        <div class="project">
-          <span class="num">Project 2</span>
-          <h3>E-commerce Website</h3>
-          <p class="muted">Online store with product catalog, cart, checkout and order management.</p>
-          <a class="link" href="https://github.com/Fiza-insights/E-commerce" target="_blank" rel="noopener">View on GitHub</a>
+        <div class="service-card tilt featured">
+          <span class="chip dark">Core Focus</span>
+          <h3>Web Applications</h3>
+          <p class="small-text">For stores and business tools</p>
+          <ul>
+            <li>Login with roles</li>
+            <li>Cart, checkout and dashboards</li>
+            <li>REST APIs and databases</li>
+            <li>Search, filter and sort</li>
+          </ul>
         </div>
 
-        <div class="project">
-          <span class="num">Project 3</span>
-          <h3>Web Application</h3>
-          <p class="muted">Inventory management system with roles, dashboard and REST API.</p>
-          <a class="link" href="https://github.com/Fiza-insights/Web-App-CRM-Inventory-" target="_blank" rel="noopener">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <span class="num">Project 4</span>
-          <h3>Booking System</h3>
-          <p class="muted">Appointment booking with time slots and double-booking prevention.</p>
-          <a class="link" href="https://github.com/Fiza-insights/Booking-System" target="_blank" rel="noopener">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <span class="num">Project 5</span>
-          <h3>Educational / Blog Portal</h3>
-          <p class="muted">Blog and news portal with categories, comments and admin approval.</p>
-          <a class="link" href="https://github.com/Fiza-insights/Educational-Blog-Portal" target="_blank" rel="noopener">View on GitHub</a>
+        <div class="service-card tilt">
+          <span class="chip">Platforms</span>
+          <h3>Booking and Content</h3>
+          <p class="small-text">For clinics, blogs and courses</p>
+          <ul>
+            <li>Time slots without double booking</li>
+            <li>Blogs with admin approval</li>
+            <li>Comments and categories</li>
+            <li>Mobile-friendly reading</li>
+          </ul>
         </div>
 
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Get In <span class="gold">Touch</span></h2>
-      <p class="muted">Want to work together or just say hello? Send me an email.</p>
-      <a href="mailto:fiza.cm26.9214@gmail.com" class="btn">fiza.cm26.9214@gmail.com</a>
-      <a href="https://github.com/Fiza-insights" target="_blank" rel="noopener" class="btn outline">GitHub</a>
+    <!-- WORK -->
+    <section id="work" class="work-band">
+      <div class="container">
+        <div class="section-head light">
+          <p class="script light">Featured Work</p>
+          <h2>Internship projects. <em>Real impact.</em></h2>
+        </div>
+
+        <div class="work-grid">
+
+          <a class="work-tile tilt dark-spot" href="https://github.com/Fiza-insights/Business-Website" target="_blank" rel="noopener">
+            <span class="num">01</span>
+            <span class="status">Featured</span>
+            <h3>Business Website</h3>
+            <p>Whisker &amp; Wonderland, an aesthetic coffee shop site with menu, filterable gallery and a contact form.</p>
+            <span class="arrow">&#8599;</span>
+          </a>
+
+          <a class="work-tile tilt dark-spot" href="https://github.com/Fiza-insights/E-commerce" target="_blank" rel="noopener">
+            <span class="num">02</span>
+            <span class="status">Coming soon</span>
+            <h3>E-commerce Website</h3>
+            <p>Online store with product catalog, cart, checkout and order management.</p>
+            <span class="arrow">&#8599;</span>
+          </a>
+
+          <a class="work-tile tilt dark-spot" href="https://github.com/Fiza-insights/Web-App-CRM-Inventory-" target="_blank" rel="noopener">
+            <span class="num">03</span>
+            <span class="status">Coming soon</span>
+            <h3>Web Application</h3>
+            <p>Inventory management system with roles, dashboard and REST API.</p>
+            <span class="arrow">&#8599;</span>
+          </a>
+
+          <a class="work-tile tilt dark-spot" href="https://github.com/Fiza-insights/Booking-System" target="_blank" rel="noopener">
+            <span class="num">04</span>
+            <span class="status">Coming soon</span>
+            <h3>Booking System</h3>
+            <p>Appointment booking with time slots and no double bookings.</p>
+            <span class="arrow">&#8599;</span>
+          </a>
+
+          <a class="work-tile tilt dark-spot" href="https://github.com/Fiza-insights/Educational-Blog-Portal" target="_blank" rel="noopener">
+            <span class="num">05</span>
+            <span class="status">Coming soon</span>
+            <h3>Blog / Education Portal</h3>
+            <p>Blog with categories, comments and admin approval of posts.</p>
+            <span class="arrow">&#8599;</span>
+          </a>
+
+          <a class="work-tile tilt dark-spot all" href="https://github.com/Fiza-insights" target="_blank" rel="noopener">
+            <h3>See everything on GitHub</h3>
+            <p>All repositories, code and READMEs in one place.</p>
+            <span class="arrow">&#8599;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH MARQUEE -->
+    <div class="marquee" aria-label="Technologies I use">
+      <div class="marquee-track">
+        <span>HTML5</span><span>&#10022;</span><span>CSS3</span><span>&#10022;</span><span>JavaScript</span><span>&#10022;</span><span>Git</span><span>&#10022;</span><span>GitHub</span><span>&#10022;</span><span>VS Code</span><span>&#10022;</span><span>Responsive Design</span><span>&#10022;</span><span>Formspree</span><span>&#10022;</span>
+        <span>HTML5</span><span>&#10022;</span><span>CSS3</span><span>&#10022;</span><span>JavaScript</span><span>&#10022;</span><span>Git</span><span>&#10022;</span><span>GitHub</span><span>&#10022;</span><span>VS Code</span><span>&#10022;</span><span>Responsive Design</span><span>&#10022;</span><span>Formspree</span><span>&#10022;</span>
+      </div>
+    </div>
+
+    <!-- PROCESS -->
+    <section id="process" class="section container">
+      <div class="section-head">
+        <p class="script">How I Work</p>
+        <h2>A proven process for <em>every project.</em></h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="dot">01</div>
+          <h3>Plan</h3>
+          <p>List the core features (MVP) and pick the right tools.</p>
+        </div>
+        <div class="step">
+          <div class="dot">02</div>
+          <h3>Design</h3>
+          <p>Choose colors, fonts and a clean, responsive layout.</p>
+        </div>
+        <div class="step">
+          <div class="dot">03</div>
+          <h3>Build</h3>
+          <p>Code the pages, forms and logic with daily Git commits.</p>
+        </div>
+        <div class="step">
+          <div class="dot">04</div>
+          <h3>Deliver</h3>
+          <p>Test, document with a README and publish on GitHub.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section container">
+      <div class="section-head">
+        <p class="script">Questions</p>
+        <h2>Frequently asked <em>questions.</em></h2>
+      </div>
+      <div class="faq">
+
+        <div class="faq-item open">
+          <button class="faq-q" aria-expanded="true">Which technologies do you use?<span class="plus">+</span></button>
+          <div class="faq-a"><div><p>HTML, CSS and JavaScript for the front end, with Git and GitHub for version control. I am also learning React, Node.js, Python (Flask or Django) and SQL.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I see your code?<span class="plus">+</span></button>
+          <div class="faq-a"><div><p>Yes. Every project has its own public GitHub repository with a README, screenshots and setup steps.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How can we work together?<span class="plus">+</span></button>
+          <div class="faq-a"><div><p>Send me an email using the button below and tell me about your idea. I will reply as soon as I can.</p></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <div class="cta-box">
+        <p class="script light">Let's Connect</p>
+        <h2>Let's build something <em>meaningful together.</em></h2>
+        <p class="cta-text">Have an idea or want to say hello? I would love to hear from you.</p>
+        <div>
+          <a href="mailto:fiza.cm26.9214@gmail.com" class="btn light magnetic">fiza.cm26.9214@gmail.com</a>
+          <a href="https://github.com/Fiza-insights" target="_blank" rel="noopener" class="btn outline-light magnetic">GitHub</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <footer>
-    <p>&copy; 2026 Fiza Saleem. Full Stack Developer Intern, Codneura.</p>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="logo light-logo">Fiza<span>.</span></a>
+        <p class="footer-text">Full Stack Developer Intern at Codneura, building clean and responsive websites.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <a href="mailto:fiza.cm26.9214@gmail.com">fiza.cm26.9214@gmail.com</a>
+        <a href="https://github.com/Fiza-insights" target="_blank" rel="noopener">github.com/Fiza-insights</a>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Fiza Saleem. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
