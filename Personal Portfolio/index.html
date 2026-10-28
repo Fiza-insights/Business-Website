@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Fiza Saleem, Full Stack Developer Intern at Codneura. Skills, projects and contact details.">
+  <title>Fiza Saleem | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap">
+
+  <style>
+    :root {
+      --bg: #120C09;
+      --card: #1E1511;
+      --border: #3A2A20;
+      --caramel: #A87650;
+      --tan: #B8895F;
+      --cream: #F3E9DC;
+      --muted: #A89888;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--cream);
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 500; }
+    a { text-decoration: none; color: inherit; }
+    .muted { color: var(--muted); }
+    .gold { color: var(--tan); }
+    .script { font-family: 'Dancing Script', cursive; color: var(--tan); font-size: 1.4rem; }
+    section { max-width: 1000px; margin: auto; padding: 70px 20px; }
+    section h2 { font-size: 2rem; margin-bottom: 24px; text-align: center; }
+
+    /* Navbar */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(18, 12, 9, 0.95);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      max-width: 1000px; margin: auto; padding: 14px 20px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+    }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+    nav .links a { margin-left: 20px; font-size: 0.9rem; transition: color 0.3s; }
+    nav .links a:hover { color: var(--tan); }
+
+    /* Hero */
+    .hero { text-align: center; padding-top: 90px; }
+    .avatar {
+      width: 120px; height: 120px; margin: 0 auto 20px; border-radius: 50%;
+      background: var(--caramel); display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 3rem;
+    }
+    .hero h1 { font-size: 3rem; margin: 6px 0; }
+    .hero p.muted { max-width: 520px; margin: 10px auto 26px; }
+    .btn {
+      display: inline-block; background: var(--caramel); padding: 12px 26px;
+      border-radius: 8px; margin: 4px; transition: transform 0.3s, background 0.3s;
+    }
+    .btn:hover { background: var(--tan); transform: translateY(-3px); }
+    .btn.outline { background: transparent; border: 1px solid var(--cream); }
+
+    /* About */
+    .about-text { max-width: 700px; margin: auto; text-align: center; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .skill {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 10px 20px; border-radius: 30px; font-size: 0.9rem;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .skill:hover { border-color: var(--tan); transform: translateY(-3px); }
+    .learning { text-align: center; margin-top: 20px; font-size: 0.9rem; }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .project {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px; transition: transform 0.3s, border-color 0.3s;
+    }
+    .project:hover { transform: translateY(-6px); border-color: var(--tan); }
+    .project .num { color: var(--tan); font-size: 0.85rem; }
+    .project h3 { font-size: 1.15rem; margin: 6px 0; }
+    .project p { font-size: 0.85rem; margin-bottom: 14px; }
+    .project a.link { color: var(--tan); font-size: 0.9rem; }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact p { margin-bottom: 18px; }
+
+    footer {
+      text-align: center; padding: 24px; color: var(--muted);
+      background: var(--card); border-top: 1px solid var(--border);
+    }
+
+    /* Animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero > * { opacity: 0; animation: fadeUp 0.9s ease forwards; }
+    .hero > *:nth-child(2) { animation-delay: 0.15s; }
+    .hero > *:nth-child(3) { animation-delay: 0.3s; }
+    .hero > *:nth-child(4) { animation-delay: 0.45s; }
+    .hero > *:nth-child(5) { animation-delay: 0.6s; }
+    .hero > *:nth-child(6) { animation-delay: 0.75s; }
+
+    @media (max-width: 800px) {
+      .projects { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
+      nav .links a { margin-left: 12px; font-size: 0.8rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero > * { opacity: 1; animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#home" class="logo">Fiza Saleem</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <div class="avatar">F</div>
+      <p class="script">Hello, I am</p>
+      <h1>Fiza <span class="gold">Saleem</span></h1>
+      <p class="muted">Full Stack Developer Intern at Codneura. I build clean, responsive websites and web applications.</p>
+      <div>
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="#contact" class="btn outline">Contact Me</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About <span class="gold">Me</span></h2>
+      <div class="about-text">
+        <p class="muted">I am a student and a Full Stack Developer Intern at Codneura. During this internship I am building five real-world projects: a business website, an online store, a web application, a booking system and a blog portal. I enjoy turning ideas into simple, good-looking and easy-to-use websites.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>My <span class="gold">Skills</span></h2>
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Responsive Design</span>
+        <span class="skill">Git &amp; GitHub</span>
+        <span class="skill">VS Code</span>
+        <span class="skill">Form Validation</span>
+      </div>
+      <p class="learning muted">Currently learning: React, Node.js, Python (Flask/Django) and SQL</p>
+    </section>
+
+    <section id="projects">
+      <h2>Internship <span class="gold">Projects</span></h2>
+      <div class="projects">
+
+        <div class="project">
+          <span class="num">Project 1</span>
+          <h3>Business Website</h3>
+          <p class="muted">Whisker &amp; Wonderland, an aesthetic coffee shop website with menu, gallery filters and a contact form.</p>
+          <a class="link" href="https://github.com/Fiza-insights/Business-Website" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <span class="num">Project 2</span>
+          <h3>E-commerce Website</h3>
+          <p class="muted">Online store with product catalog, cart, checkout and order management.</p>
+          <a class="link" href="https://github.com/Fiza-insights/E-commerce" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <span class="num">Project 3</span>
+          <h3>Web Application</h3>
+          <p class="muted">Inventory management system with roles, dashboard and REST API.</p>
+          <a class="link" href="https://github.com/Fiza-insights/Web-App-CRM-Inventory-" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <span class="num">Project 4</span>
+          <h3>Booking System</h3>
+          <p class="muted">Appointment booking with time slots and double-booking prevention.</p>
+          <a class="link" href="https://github.com/Fiza-insights/Booking-System" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <span class="num">Project 5</span>
+          <h3>Educational / Blog Portal</h3>
+          <p class="muted">Blog and news portal with categories, comments and admin approval.</p>
+          <a class="link" href="https://github.com/Fiza-insights/Educational-Blog-Portal" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get In <span class="gold">Touch</span></h2>
+      <p class="muted">Want to work together or just say hello? Send me an email.</p>
+      <a href="mailto:fiza.cm26.9214@gmail.com" class="btn">fiza.cm26.9214@gmail.com</a>
+      <a href="https://github.com/Fiza-insights" target="_blank" rel="noopener" class="btn outline">GitHub</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Fiza Saleem. Full Stack Developer Intern, Codneura.</p>
+  </footer>
+
+</body>
+</html>
