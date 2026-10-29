@@ -183,3 +183,6 @@ navBox.querySelectorAll("a").forEach(function (a) {
     navBox.classList.remove("open");
   });
 });
+[...document.querySelectorAll("*")].filter(function (e) {
+  return e.getBoundingClientRect().right > document.documentElement.clientWidth + 1;
+}).map(function (e) { return e.tagName + "." + e.className; });

@@ -384,3 +384,31 @@ ul { list-style: none; }
   object-fit: cover;
   border-radius: inherit;
 }
+/* FIX: horizontal slider aur mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+body { position: relative; }
+
+.hero-text, .hero-visual, .about > *, .service-card,
+.work-tile, .step, .faq-item, .cta-box {
+  min-width: 0;
+}
+
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 4px; }
+.stats { flex-wrap: wrap; }
+
+/* Olive par "About Me" aur "Let's Connect" saaf nazar aayen */
+.script.light { color: var(--cream); opacity: 0.9; }
+
+@media (max-width: 900px) {
+  .hero, .about, .cards-3, .work-grid, .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-buttons { justify-content: center; }
+  .badge { right: 0; bottom: -10px; }
+  .leaf-1 { right: 0; }
+  .leaf-2 { left: 0; }
+  .section { padding-left: 16px; padding-right: 16px; }
+}
